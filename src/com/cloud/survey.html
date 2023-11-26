@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Survey Form</title>
+<link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+
+
+
+<form id="surveyForm"   onsubmit="target_popup(event)">
+<div id="form">
+<div align="center">
+     <h1><u>SURVEY FORM</u></h1>
+     
+     
+     <div class="bottom-top-padding">
+          <div class="label-div">
+            <label id="name-label" for="name">First Name : </label>         
+            <input  id="FNA" name="First Name" class="input-text" type="text" placeholder="Enter Name" required> 
+            <span id="nameError" class="error"></span>
+          
+          </div>
+     </div>    
+     
+      <div class="bottom-top-padding">
+        <div class="label-div">
+         <label id="lastName-label" for="lastName">Last Name : </label>     
+         <input id ="LN"  name="Last Name" class="input-text" for="lastName"/> 
+        </div>       
+       </div>     
+       
+       <div class="bottom-top-padding">
+        <div  class="label-div">
+          <label class="label-div">Date of Birth :</label>
+          <input type="date" class="input-text" id="dob" name="Date of Birth" min=sysDate() max=sysDate() required/> 
+        </div>
+       </div>         
+       
+       <div class="bottom-top-padding">
+        <div class="label-div">
+             <label>Country :</label>
+                <select id="country" name="Country"  class="input-text">
+                <option value="INDIA">INDIA</option>
+                <option value="USA">USA</option>
+                <option value="DUBAI">DUBAI</option>
+                <option value="SOUTH KOREA">SOUTH KOREA</option>
+                <option value="SWITZERLAND">SWITZERLAND</option>
+                <option value="EUROPE">EUROPE</option>
+             </select>  
+           
+         </div>
+       </div>
+       
+      <div class="bottom-top-padding">
+        <p class="label-div">
+					<label>Gender :</label>
+					<input type="radio" id="gen1" name="gen" value="m" checked>
+					<label>Male</label> &nbsp; 
+					<input type="radio" id="gen2" name="gen" value="f">
+					<label>FeMale</label> &nbsp; 
+					<input type="radio" id="gen3" name="gen" value="o">
+					<label>Others</label> 
+				</p>
+				
+        </div>
+         
+        <div class="bottom-top-padding">
+          <div class="label-div">      
+                  <label>Profession :</label>
+                  <input type="text" class="input-text" id= "profession" />  
+              </div>
+         </div>
+         
+         <div class="bottom-top-padding">
+          <div class="label-div">  
+	          <label>GMail :</label>
+	                <input type="email" id="em" name="Email" class="input-text"  required/>
+	                <span id="emailError" class="error"></span>
+	          </div>
+         </div>
+              
+        <div class="bottom-top-padding">
+         
+                 <label class="label-div">Phone  Number :</label>
+                 <input id="phone" type="tel"   id="phone"  
+                         placeholder="123-456-7890" required/>
+                  <span id="phoneError" class="error"></span> 
+            </div>
+           
+            <div align="center">
+				<input  type="submit" value="Submit">
+            </div> 
+              
+             <div align ="center">
+                <button onclick="clearForm()">RESET</button>
+           
+            </div>
+             
+</div>
+</div>
+    
+</form>
+ <script src="surveyscript.js"></script>
+</body>
+</html>
